@@ -1,5 +1,3 @@
-const Dashboard = () => {
-  return <div>Dashboard</div>
-}
+import Dashboard from './Dashboard'
 
 export default Dashboard

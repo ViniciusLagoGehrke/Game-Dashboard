@@ -1,5 +1,3 @@
-const Sidebar = () => {
-  return <div>Sidebar</div>
-}
+import Sidebar from './Sidebar'
 
 export default Sidebar

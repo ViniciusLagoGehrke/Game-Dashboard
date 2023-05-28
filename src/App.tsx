@@ -1,14 +1,21 @@
+import { ColorModeContext, useMode } from 'theme'
+import { CssBaseline, ThemeProvider } from '@mui/material'
+import Header from './layout/header'
+
 function App() {
+  const { theme, colorMode } = useMode()
+
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-        Welcome!
-      </h1>
-      <p className="mt-4 text-xl text-gray-500">
-        This is a boilerplate build with Vite, React 18, TypeScript, Vitest,
-        Testing Library, TailwindCSS 3, Eslint and Prettier.
-      </p>
-    </div>
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <div className="flex h-full w-full flex-col items-center justify-center">
+          <main className="w-full">
+            <Header />
+          </main>
+        </div>
+      </ThemeProvider>
+    </ColorModeContext.Provider>
   )
 }
 
