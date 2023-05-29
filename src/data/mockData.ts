@@ -1,13 +1,30 @@
 import { tokens } from '../theme'
 
-export const mockDataTeam = [
+export const ACCESS = {
+  ADMIN: 'admin',
+  MANAGER: 'manager',
+  USER: 'user'
+} as const
+
+export type AccessType = (typeof ACCESS)[keyof typeof ACCESS]
+
+export type TeamType = {
+  id: number
+  name: string
+  email: string
+  age: number
+  phone: string
+  access: AccessType
+}
+
+export const mockDataTeam: TeamType[] = [
   {
     id: 1,
     name: 'Jon Snow',
     email: 'jonsnow@gmail.com',
     age: 35,
     phone: '(665)121-5454',
-    access: 'admin'
+    access: ACCESS.ADMIN
   },
   {
     id: 2,
@@ -15,7 +32,7 @@ export const mockDataTeam = [
     email: 'cerseilannister@gmail.com',
     age: 42,
     phone: '(421)314-2288',
-    access: 'manager'
+    access: ACCESS.MANAGER
   },
   {
     id: 3,
@@ -23,7 +40,7 @@ export const mockDataTeam = [
     email: 'jaimelannister@gmail.com',
     age: 45,
     phone: '(422)982-6739',
-    access: 'user'
+    access: ACCESS.USER
   },
   {
     id: 4,
@@ -31,7 +48,7 @@ export const mockDataTeam = [
     email: 'anyastark@gmail.com',
     age: 16,
     phone: '(921)425-6742',
-    access: 'admin'
+    access: ACCESS.ADMIN
   },
   {
     id: 5,
@@ -39,7 +56,7 @@ export const mockDataTeam = [
     email: 'daenerystargaryen@gmail.com',
     age: 31,
     phone: '(421)445-1189',
-    access: 'user'
+    access: ACCESS.USER
   },
   {
     id: 6,
@@ -47,7 +64,7 @@ export const mockDataTeam = [
     email: 'evermelisandre@gmail.com',
     age: 150,
     phone: '(232)545-6483',
-    access: 'manager'
+    access: ACCESS.MANAGER
   },
   {
     id: 7,
@@ -55,7 +72,7 @@ export const mockDataTeam = [
     email: 'ferraraclifford@gmail.com',
     age: 44,
     phone: '(543)124-0123',
-    access: 'user'
+    access: ACCESS.USER
   },
   {
     id: 8,
@@ -63,7 +80,7 @@ export const mockDataTeam = [
     email: 'rossinifrances@gmail.com',
     age: 36,
     phone: '(222)444-5555',
-    access: 'user'
+    access: ACCESS.USER
   },
   {
     id: 9,
@@ -71,11 +88,18 @@ export const mockDataTeam = [
     email: 'harveyroxie@gmail.com',
     age: 65,
     phone: '(444)555-6239',
-    access: 'admin'
+    access: ACCESS.ADMIN
   }
 ]
 
-export const mockDataContacts = [
+export type ContactsType = Omit<TeamType, 'access'> & {
+  address: string
+  city: string
+  zipCode: string
+  registrarId: number
+}
+
+export const mockDataContacts: ContactsType[] = [
   {
     id: 1,
     name: 'Jon Snow',
@@ -199,7 +223,12 @@ export const mockDataContacts = [
   }
 ]
 
-export const mockDataInvoices = [
+export type InvoiceType = Omit<TeamType, 'access' | 'age'> & {
+  cost: string
+  date: string
+}
+
+export const mockDataInvoices: InvoiceType[] = [
   {
     id: 1,
     name: 'Jon Snow',
@@ -266,7 +295,14 @@ export const mockDataInvoices = [
   }
 ]
 
-export const mockTransactions = [
+export type TransactionType = {
+  txId: string
+  user: string
+  cost: string
+  date: string
+}
+
+export const mockTransactions: TransactionType[] = [
   {
     txId: '01e4dsa',
     user: 'johndoe',
@@ -317,7 +353,19 @@ export const mockTransactions = [
   }
 ]
 
-export const mockBarData = [
+export type BarDataType = {
+  country: string
+  'hot dog': number
+  'hot dogColor': string
+  burger: number
+  burgerColor: string
+  kebab: number
+  kebabColor: string
+  donut: number
+  donutColor: string
+}
+
+export const mockBarData: BarDataType[] = [
   {
     country: 'AD',
     'hot dog': 137,
@@ -397,7 +445,14 @@ export const mockBarData = [
   }
 ]
 
-export const mockPieData = [
+export type PieDataType = {
+  id: string
+  label: string
+  value: number
+  color: string
+}
+
+export const mockPieData: PieDataType[] = [
   {
     id: 'hack',
     label: 'hack',
@@ -430,7 +485,13 @@ export const mockPieData = [
   }
 ]
 
-export const mockLineData = [
+export type LineDataType = {
+  id: string
+  color: string
+  data: { x: string; y: number }[]
+}
+
+export const mockLineData: LineDataType[] = [
   {
     id: 'japan',
     color: tokens('dark').greenAccent[500],
@@ -595,7 +656,12 @@ export const mockLineData = [
   }
 ]
 
-export const mockGeographyData = [
+export type GeographyDataType = {
+  id: string
+  value: number
+}
+
+export const mockGeographyData: GeographyDataType[] = [
   {
     id: 'AFG',
     value: 520600

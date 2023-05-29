@@ -26,7 +26,7 @@ export const tokens = (mode: Mode) => ({
           100: '#d0d1d5',
           200: '#a1a4ab',
           300: '#727681',
-          400: '#434957',
+          400: '#1f2a40',
           500: '#141b2d',
           600: '#101624',
           700: '#0c101b',
@@ -169,22 +169,22 @@ export const themeSettings = (mode: Mode) => {
     typography: {
       fontSize: 12,
       h1: {
-        fontSize: 40
-      },
-      h2: {
         fontSize: 32
       },
-      h3: {
+      h2: {
         fontSize: 24
       },
-      h4: {
+      h3: {
         fontSize: 20
       },
-      h5: {
+      h4: {
         fontSize: 16
       },
-      h6: {
+      h5: {
         fontSize: 14
+      },
+      h6: {
+        fontSize: 12
       }
     }
   }

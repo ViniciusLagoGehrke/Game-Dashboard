@@ -31,7 +31,8 @@ const Item = ({ title, to, icon, selected, setSelected }: ItemProps) => {
     <MenuItem
       active={selected === title}
       style={{
-        color: colors.grey[100]
+        color: colors.grey[100],
+        height: '30px'
       }}
       onClick={() => setSelected(title)}
       icon={icon}
@@ -69,7 +70,8 @@ const SideMenu = () => {
         collapsed={isCollapsed}
         backgroundColor={colors.primary[400]}
         rootStyles={{
-          border: 'none'
+          border: 'none',
+          height: '100%'
         }}
       >
         <Menu
@@ -89,7 +91,8 @@ const SideMenu = () => {
             icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
             style={{
               margin: '10px 0 20px 0',
-              color: colors.grey[100]
+              color: colors.grey[100],
+              height: '30px'
             }}
           >
             {!isCollapsed && (
@@ -114,8 +117,8 @@ const SideMenu = () => {
               <Box display="flex" justifyContent="center" alignItems="center">
                 <img
                   alt="profile-user"
-                  width="100px"
-                  height="100px"
+                  width="80px"
+                  height="80px"
                   src={'https://avatars.githubusercontent.com/u/46430040?v=4'}
                   style={{ cursor: 'pointer', borderRadius: '50%' }}
                 />
