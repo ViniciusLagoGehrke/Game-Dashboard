@@ -355,8 +355,8 @@ export const mockTransactions: TransactionType[] = [
 
 export type BarDataType = {
   country: string
-  'hot dog': number
-  'hot dogColor': string
+  hotdog: number
+  hotdogColor: string
   burger: number
   burgerColor: string
   kebab: number
@@ -368,8 +368,8 @@ export type BarDataType = {
 export const mockBarData: BarDataType[] = [
   {
     country: 'AD',
-    'hot dog': 137,
-    'hot dogColor': 'hsl(229, 70%, 50%)',
+    hotdog: 137,
+    hotdogColor: 'hsl(229, 70%, 50%)',
     burger: 96,
     burgerColor: 'hsl(296, 70%, 50%)',
     kebab: 72,
@@ -379,8 +379,8 @@ export const mockBarData: BarDataType[] = [
   },
   {
     country: 'AE',
-    'hot dog': 55,
-    'hot dogColor': 'hsl(307, 70%, 50%)',
+    hotdog: 55,
+    hotdogColor: 'hsl(307, 70%, 50%)',
     burger: 28,
     burgerColor: 'hsl(111, 70%, 50%)',
     kebab: 58,
@@ -390,8 +390,8 @@ export const mockBarData: BarDataType[] = [
   },
   {
     country: 'AF',
-    'hot dog': 109,
-    'hot dogColor': 'hsl(72, 70%, 50%)',
+    hotdog: 109,
+    hotdogColor: 'hsl(72, 70%, 50%)',
     burger: 23,
     burgerColor: 'hsl(96, 70%, 50%)',
     kebab: 34,
@@ -401,8 +401,8 @@ export const mockBarData: BarDataType[] = [
   },
   {
     country: 'AG',
-    'hot dog': 133,
-    'hot dogColor': 'hsl(257, 70%, 50%)',
+    hotdog: 133,
+    hotdogColor: 'hsl(257, 70%, 50%)',
     burger: 52,
     burgerColor: 'hsl(326, 70%, 50%)',
     kebab: 43,
@@ -412,8 +412,8 @@ export const mockBarData: BarDataType[] = [
   },
   {
     country: 'AI',
-    'hot dog': 81,
-    'hot dogColor': 'hsl(190, 70%, 50%)',
+    hotdog: 81,
+    hotdogColor: 'hsl(190, 70%, 50%)',
     burger: 80,
     burgerColor: 'hsl(325, 70%, 50%)',
     kebab: 112,
@@ -423,8 +423,8 @@ export const mockBarData: BarDataType[] = [
   },
   {
     country: 'AL',
-    'hot dog': 66,
-    'hot dogColor': 'hsl(208, 70%, 50%)',
+    hotdog: 66,
+    hotdogColor: 'hsl(208, 70%, 50%)',
     burger: 111,
     burgerColor: 'hsl(334, 70%, 50%)',
     kebab: 167,
@@ -434,8 +434,8 @@ export const mockBarData: BarDataType[] = [
   },
   {
     country: 'AM',
-    'hot dog': 80,
-    'hot dogColor': 'hsl(87, 70%, 50%)',
+    hotdog: 80,
+    hotdogColor: 'hsl(87, 70%, 50%)',
     burger: 47,
     burgerColor: 'hsl(141, 70%, 50%)',
     kebab: 158,
