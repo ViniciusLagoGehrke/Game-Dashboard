@@ -2,7 +2,7 @@ import { ColorModeContext, useMode } from 'theme'
 import { CssBaseline, ThemeProvider } from '@mui/material'
 import { Routes, Route } from 'react-router-dom'
 import Topbar from './layout/Topbar'
-import Sidebar from './layout/Sidebar'
+import SideMenu from './layout/SideMenu'
 import Dashboard from './pages/Dashboard'
 import Team from './pages/Team'
 import Contacts from './pages/Contacts'
@@ -23,7 +23,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="relative flex h-full w-full">
-          <Sidebar />
+          <SideMenu />
           <main className="flex h-full w-full flex-col">
             <Topbar />
             <Routes>
