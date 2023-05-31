@@ -3,7 +3,7 @@ import { CssBaseline, ThemeProvider } from '@mui/material'
 import { Routes, Route } from 'react-router-dom'
 import Topbar from './layout/Topbar'
 import SideMenu from './layout/SideMenu'
-import Dashboard from './pages/Dashboard'
+import Main from './pages/Main'
 import Team from './pages/Team'
 import Contacts from './pages/Contacts'
 import Invoices from './pages/Invoices'
@@ -27,7 +27,7 @@ function App() {
           <main className="flex h-full w-full flex-col">
             <Topbar />
             <Routes>
-              <Route path="/" element={<Dashboard />} />
+              <Route path="/" element={<Main />} />
               <Route path="/team" element={<Team />} />
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/invoices" element={<Invoices />} />
