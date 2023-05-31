@@ -1,6 +1,8 @@
-# React Tailwindcss Boilerplate build with Vite
+# Game Dashboard
 
-This is a boilerplate build with Vite, React 18, TypeScript, Vitest, Testing Library, TailwindCSS 3, Eslint and Prettier.
+![Desktop Preview](desktop-preview.jpg)
+
+Dashboard using React 18, Material-UI, Nivo Charts, FullCalendar, Formik and Yup.
 
 ## What is inside?
 
@@ -9,29 +11,33 @@ This project uses many tools like:
 - [Vite](https://vitejs.dev)
 - [ReactJS](https://reactjs.org)
 - [TypeScript](https://www.typescriptlang.org)
-- [Vitest](https://vitest.dev)
-- [Testing Library](https://testing-library.com)
-- [Tailwindcss](https://tailwindcss.com)
+- [Material-UI](https://mui.com)
+- [Nivo Charts](https://nivo.rocks)
+- [FullCalendar](https://fullcalendar.io)
+- [Formik](https://formik.org)
+- [Yup](https://github.com/jquense/yup)
 - [Eslint](https://eslint.org)
 - [Prettier](https://prettier.io)
 
 ## Getting Started
 
+For this project I used Node.js v16.10.0 and PNPM v7.26.2
+
 ### Install
 
-Create the project.
+Clone this project
 
 ```bash
-git clone url
+git clone https://github.com/ViniciusLagoGehrke/Game-Dashboard.git
 ```
 
 Access the project directory.
 
 ```bash
-cd my-app
+cd Game-Dashboard
 ```
 
-Install dependencies.
+Install dependencies. (I suggest using PNPM)
 
 ```bash
 pnpm install
@@ -67,12 +73,16 @@ pnpm run build
 pnpm run test
 ```
 
-View and interact with your tests via UI.
+View and interact with your tests via UI. (Awesone vitest feature!)
 
 ```bash
 pnpm run test:ui
 ```
 
-## License
+## Deployment
 
-This project is licensed under the MIT License.
+I deployed this project in Vercel where you can Log in with GitHub, GitLab, Bitbucket, or email to deploy websites for free with zero configuration, automatic SSL, and global CDN.
+
+You can check it live here: [Game Dashboard](https://game-dashboard-nine.vercel.app/)
+
+[OnPortfolio](https://front-end-portfolio.vercel.app/)
